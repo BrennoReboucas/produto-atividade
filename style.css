@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body {
+    background-image: linear-gradient(to right bottom, #8d2485, #ba1a76, #da285f, #ed4944, #f26f23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.product {
+    padding: 20px;
+    background-color: #fff;
+    width: 70%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.img-product {
+    width: 100%;
+    height: 60%;
+}
+
+.slider {
+    width: 105%;
+    height: 350px;
+    position: relative;
+    text-align: center;
+    bottom: 100px;
+}
+
+.slider input {
+    display: none;
+}
+
+.slide {
+    display: none;
+    width: 400px;
+    margin: 0 auto;
+    transform: rotate(10deg);
+    border-radius: 12px;
+}
+
+#radio1:checked ~ .s1,
+#radio2:checked ~ .s2,
+#radio3:checked ~ .s3 {
+    display: block;
+}
+
+.navigation {
+    margin-top: 5px;
+}
+
+.bar {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#radio1:checked ~ .navigation label[for="radio1"],
+#radio2:checked ~ .navigation label[for="radio2"],
+#radio3:checked ~ .navigation label[for="radio3"] {
+    background: #333;
+}
+
+.description{
+    color: #fff;    
+    padding: 20px 10px;
+}
+
+.category {
+    display: flex;
+    gap: 20px;
+}
+
+.line-div {
+    content: '';
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #fff;
+    margin-top: 30px;
+}
+
+.category > p.category-product {
+    background-color: #c5c5c57a;
+    color: #000;
+    padding: 5px 15px 5px 15px;
+    border-radius: 16px;
+    margin-top: 20px;
+    cursor: default;
+}
+
+.buy {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.buy > button {
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    padding: 5px 30px;
+    border-radius: 12px;
+    border: none;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.buy > button:hover {
+    transform: scale(1.15);
+    background-color: #da285f;
+    color: #fff;
+}
+
+@media (max-width: 400px) {
+    body {
+        width: 100dvw;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .product {
+        width: 80%;
+        height: auto;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .img-product {
+        width: 100%;
+        height: auto;
+    }
+
+    .slider {
+        width: 100%;
+        height: auto;
+        position: relative;
+        text-align: center;
+        bottom: 0;
+        margin-bottom: 20px;
+    }
+
+    .slide {
+        display: none;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    .line-div {
+        margin-top: 20px;
+    }
+
+    .category {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .category > p.category-product {
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
+
+    .buy {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .buy > button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
